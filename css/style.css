@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    background: url("../images/background.jpg");
+    background-size: 100%;
+    height: 769px;
+}
+
+.logo {
+  /*  border: solid 1px green; */
+    margin-left: 168px;
+    padding-top: 52px;
+    float: left;
+}
+
+.nav {
+ /*   border: solid 1px greenyellow; */
+    margin-left: 258px;
+    padding-top: 70px;
+    float: left;
+}
+
+.nav li {
+  /*  border: solid 1px blueviolet; */
+    float: left;
+    margin-right: 38px;
+    list-style-type: none;
+}
+
+.nav li a{
+    color: white;
+    text-decorationcolor: white;: none;
+}
+
+.whitetext {
+    color: white;
+    padding-top: 170px;
+    text-align: center;
+}
+
+.whitetext h1 {
+    font-weight: 100;
+    font-size: 60pt;
+}
+
+.whitetext h2 {
+    font-size: 50pt;
+}
+
+.welcome {
+    width: 485px;
+    height: 230px;
+    background: url("../images/Base.jpg");
+    margin-left: 685px;
+    margin-top: 240px;
+    padding-left: 35px;
+    padding-top: 40px;
+}
+
+.welcome h2 {
+    font-size: 40pt;
+    font-weight: bold;
+}
+
+.what {
+    margin-left: 173px;
+    font-size: 50pt;
+    font-weight: bold;
+}
+
+.icon_1 {
+    margin-top: 135px;
+    float: left;
+    margin-left: 15%;
+    width: 15%;
+    
+}
+
+.icon_2 {
+    margin-top: 135px;
+    float: left;
+    margin-left: 15%;
+    width: 15%;
+}
+
+.icon_3 {
+    margin-top: 135px;
+    float: left;
+    margin-left: 15%;
+    margin-right: 10%;
+    width: 15%;
+}
+
+.chosefilms {
+    padding-top: 635px;
+    text-align: center;
+}
+
+.present {
+    background: url("../images/Layer\ 6.jpg");
+    background-size: 100%;
+    margin-top: 155px;
+    height: 750px;
+}
+
+.logo2 {
+    margin-left: 10%;
+    float: left;
+}
+
+.presentall {
+    height: 535px;
+    width: 835px;
+    padding-left: 40%;
+
+}
+
+.present h2 {
+    padding-top: 150px;
+    text-align: center;
+    color: white;
+    font-size: 40pt;
+}
+
+.present p {
+    text-align: right;
+    color: white;
+}
+
+.getpresent {
+    text-align: "right";
+}
+
+.button {
+    width: 220px;
+    height: 55px;
+    background: url("../images/Rounded\ Rectangle\ 4.png");
+    margin-left:450px;
+}
+
+.button p {
+    padding-top: 15px;
+    padding-right: 40px;
+}
+
+.films {
+    margin-top: 90px;
+    margin-left: 200px;
+
+}
+
+.logotyp1 {
+    padding-top: 75px;
+    margin-left: 15%;
+    margin-right: 5%;
+    float: left;
+}
+.logotyp2 {
+    padding-top: 75px;
+    margin-right: 5%;
+    float: left;
+}
+.logotyp3 {
+    padding-top: 75px;
+}
+.logotyp4 {
+    padding-top: 75px;
+    margin-left: 15%;
+    margin-right: 5%;
+    float: left;
+}
+.logotyp5 {
+    padding-top: 75px;
+    margin-right: 5%;
+    float: left;
+}
+.logotyp6 {
+    padding-top: 75px;
+}
+.logotyp7 {
+    padding-top: 75px;
+    margin-left: 15%;
+    margin-right: 5%;
+    float: left;
+}
+.logotyp8 {
+    padding-top: 75px;
+    margin-right: 5%;
+    float: left;
+}
+.logotyp9 {
+    padding-top: 75px;
+}
+
+.icons {
+    background: url("../images/backgroundlast.png");
+    
+}
+
+.iconss {
+    padding-left: 42%;
+}
+
+.icons p {
+    text-align: center;
+}
+
+.icons footer {
+    text-align: center;
+}

@@ -2,125 +2,247 @@
 <html lang="ru">
 
 <head>
+    <title>innocinema.ru</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Webpack Boilerplate</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="build/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
 </head>
 
-<body>
-<div> 
-    EVENT DETAILS 
-    SPEAKERS 
-    SPONSORS 
-    PAST EVENTS 
-    CONTACT
-</div>
-<div>
-    <h1>
-        Закажите билет в кино
-    </h1>
-    <h2>
-        Всем покупателям подарок!
-    </h2>
-</div>
-<div>
-    <h2>
-        Добро пожаловать!
-    </h2>
-    <p>
-        Cumque dolorem eum harum laudantium libero molestias saepe soluta? 
-        Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
-    </p>
-    <p>
-        Cumque dolorem eum harum laudantium libero molestias saepe soluta? 
-        Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
-    </p>
-</div>
-<h2>Почему мы?</h2>
-<div>
-    <div>
-        <h2>
-            Большие экраны
+<body class="basik">
+<div class="main"> 
+    <div class="logo">
+        <svg 
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="188px" height="45px">
+        <a href="http://university.innopolis.ru/"><image alt="Иннополис" title="иннополис" x="0px" y="0px" width="188px" height="45px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAALwAAAAtCAQAAAC+esnGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjCQgVNDQU0+/LAAAJFUlEQVR42u2beXBV9RXHP0leAiEhgSFR9olEHWRt0AYVkEAolUDgMdAFmIJSmIoo0g5ddFC0wyJo0bIqVRu0DK0i+9JSoNB2wF0Lsi9lKUsBHbaEkJB8+0d+ubnLezdh8b0yk+/94/3uOed37u+ee37nd37n3hcjbmG05U06ExPtYVwPYm5hw9dlHy3g1jR8bLQHcAPoSotoD+H6cSsbPjnaA7gR3MqGv6VRa/goodbwUUIA6EiQpewA0niE5sARZlHmkmzAMDKIp4S5HPHo6U82ybzLVgBy6EGqg1/OYd7jpHUew3fpRpJD5ioH+CPnrPNY+vEAiQ6ZUvbxnk0mHL5NPm9zwOjpy4MuPZUYHzXLa4TKJAWFErVPlVikOOE4PrB4/1GmizdGkvSJEErQcoVGoX5o5FO1OYzMV+phZNJtV3TitB4UQkFzjucYK0nKMXq2KTyI1oFOS8bwAx1D+p1ibIIpDt4BNXeoWSZJWiyEXvG5zVK1EULv+shc0G1CaI2PzFk19DF8gi7ZDL9Cfoia4QOkW85fERyK2EMnYBSlPG6b9hXYQC8gk808wBlb4AC4AsCPAPiM5yi0Taz2zCRAgCE8SzKDja6ZXLbJdOPXQH2CLCCNPABWM5sS23V68QzQiL78IewkrmcLYQ3pD8Aq5prx/b/APPmg0COSpHNK1w5DfdF6Qg0MJUcvmdYOpVvciuBSIFSpb4DnGf9FkvSqUIaRyfbI7JYkPW+Tae2ROSRJGu/j8VVjrdLTL3q+Hc7jvTjDw2whE/glxTzv4v6CZB4D2rGOXM6HeZ5e+mUPpcRD8fpksYdy4Zr86iSFJAEL2EC5jV7KTgpqsEh/YwiEpB6nB9toBkyimBcdPPE4KQwF7mU9uVyK3uBrgCtMYSrQxIRAO54hnw+jNbBwefwxcjgFwDRbpK+AGM5SALJZSb1oDb2GmMaEMPMynaXUjdawwm+gDtCbswDMZbSLV8YQ1gDQg2UkRGvwBqnV8H/D7XQgiyw6k0UWWXRiIgBN6XrTRnEH8zxh2QcBH94O8thACvCax7glfJ/V9AB6s8ShpZxYoCObHfJx3OnR34ovHOdJNDW6q3A3hx0yKbQCcGzvnmBKNXd5hR0uykkmm2veHDTmQ9JZUfMOAV/ux/RhA4nEMsfDK6I/G8kG8rEX9XfRDniZhx1LZSZtAdhjo73DSK7aztua1HY7cJKL1AeWsMVh5I7UB+BLm67JBDlu2tNcUfs2FoS8s07md/dNMvxjtrS8ZgiRTjoTn566YttwOFPAVH1h480WQv1UFna7sl31bCleaPxdsUJonI/MWrO5e8PDCYZJJ0NjwU1LDwskSctr3qP6ItkmBlmZy3Y+dfDO8x0+M+1S3gFgNf3YG0LPVRaTS5HvtYqZR55J+2YxyvJjO4qYxSAzx37CC9eYXlbhAi8w5jr73gTEKAOA0xSRTBpQzlGPVH0aWVJuxNGMWKDQtpOFxp58oapvBv8GYAgfuGROufL2GJoS75I54cr/AzS1uc9pioilpaUtQPOQ913OCUeYu1EUMAJYQbCmHQK2xetS2Jz8IhfDaigL8aAwqag/TrkWTi8U0ueduOq5frlN79VqrxElBG5cxTWgQZi9YoC65qFn0gI4zv4QUs3IIJ69nAQa0opzNOEUhxw7UjvSyCSOrUAS7Vxl4SvsdowlkQ4Oic0AJNDeLOZu/NPMl3p04BNr7qTSnRjglLXwp4QJhSmRq04k6BWVCNuCl2M4P9BJBR2LZZmGefpPlyTNEUI/U4kOK0tlko6oS4irpZj60UuK0SRTrXSiRL9VgpHO01kXF6HRHmoVGgihQTpn2gUOboEQaqn1IZfbgGaoOHKGX2jdkNPwA61s5H7b0Ms0xNG7jq5KkgYL3SdJOiw0S5J0Rmmeq70tSTqmJE3xyWoWCaFknfdw0GjffKiBULqKrLbX8Mk6GCbPeV2SIhVqMhgehvOc1WoNQCmXSSGWhRSy0hYK4gD4Grjfok7kezQmjRmMdOjMNZWZp4hjAgAnWE6pxY+jJ22AoUziAHeSYuh/Y4e1J5kEwFmWhijvVZTz2nreah1iFQAfAcPNVs+NpqYOECF/z7FN4UqPrwgR5yyPr9xHdDOeVKLeVn97bj7e8ng0xNC7OWbHXknSGqH2ht/ZNZ67DL2f0LdMe6qNn2xoo2twT1Ueb/fvmR5KxfFQRafILq52yLwR9eIf5LOOeOJZTj82+WpZzCh6Aq/T0fLoX3E3UMw4MPME2tDE0a+v+bWnwIts7UIukwiM4GvHzrmM/Y7dd3jE+tOjZ/jX+G9Y3kYGs4R4EllBr2pKt2P5Fwncw8+ZCsBdPA3AVA7apN4K2XcnH9vO7G/MRAFjgC508fTawAhO3OjtR+PzjmJWM44nfWVW8ijlQDLruddXcg8vAzDRxNT51AH2M6PacewhGDYVhQm2FcaJXqz1bOuuGdHw+FPk10BqEXV5A0jhz/TkmI/kZIaSQSJzyGMouQCMdb3N+pIVJtuOpRwQu1gR4h1YFYoYQHe6Eg/EWeEmmz5AR3qbsrgT11Agj7Th3RuKuj4vUt6kHrOANDaaV9+hcZknWA30YbQp9v6Jv7pknnSVqWuGLWxxUWK5RCKQGVI+23N/aR4ZU4iOlOG/Mr+Led82vWPIN5M2dIlhNklMA9JZ56t9DcsJgikBX+SnFqey5PAsmZ5PtAA2hSx4QAJDQ9LvMymkO8ZXvDJqxEYWcgnYZa7chemO0nMCT5lWxDZQW322I58rVuHK0tMckg+50snKo6UuWDJjHZz3fTdCQVs6mWHr1cC311EludLJe1TikHhVzWwjCoHILa4DzOd9XnxKvs8i9zTTrXah501SJY7yqInhv2eegzOStTf5TvaS58iAAHYz0FWHOk6+X6kwkv8IiaE77a3MugLl7GKTMXsbegNXmO/pOYA7APiIrUAW3YELnhSxNbnsDBnLs8kOE1RXcZB0hgHwli0+1wlbq9/HevOIm5sPs+abhTyVPG43Up+zBUikr6cs3Y4fR9rwtQAIsgxqP9OOGmoNHyXUGj5KqDV8lFBr+Cih1vCRhilE16aTkUY8e2hV6/GRRyl5bIP/AUED2gqVIxdyAAAAAElFTkSuQmCC" /></a>
+       </svg>
+    </div>
+    <ul class="nav">
+        <li><a href="#">EVENT DETAILS</a></li>
+        <li><a href="#">SPEAKERS</a></li>
+        <li><a href="#">SPONSORS</a></li>
+        <li><a href="#">PAST EVENTS</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>    
+    <div class="whitetext">
+        <h1>
+            Закажите билет в кино
+        </h1>
+        <h2> 
+            Всем покупателям подарок!
         </h2>
+    </div> 
+    <article class="welcome">
+            <h2>
+                Добро пожаловать!
+            </h2>
+        </br>
+            <p>
+                Cumque dolorem eum harum laudantium libero molestias saepe soluta? 
+                Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
+            </p>
+            <p>
+                Cumque dolorem eum harum laudantium libero molestias saepe soluta? 
+                Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
+            </p>
+    </article>
+     
+</div>
+ 
+<h2 class="what">Почему мы?</h2>
+<section class="icon_1">
+    <img alt="картинка вдруг не загрузилась" title="большие экраны" src="images/icon_1.png"> 
+    <h2>
+        Большие экраны
+    </h2>
+    <p>
         Meet the Community you’ve always talked with, in real life! This meetup will be all about authors engaging 
         each other with interesting coversation and topics. We will have loads of fun.
-    </div>
-    <div>
-        <h2>
-            Объемный звук
-        </h2>
+    </p>
+</section>
+<section class="icon_2">
+    <img alt="картинка вдруг не загрузилась" title="объемный звук" src="images/icon_2.png"> 
+    <h2>
+        Объемный звук
+    </h2>
+    <p>
         In this meetup you will get to know the marketplaces better, because that’s why were all here for right?
         Learn a few tips and tricks from experienced authors from all over the country.
-    </div>
-    <div>
-        <h2>
-            Удобные кресла
-        </h2>
+    </p>
+</section>
+<section class="icon_3">
+    <img alt="картинка вдруг не загрузилась" title="удобные кресла" src="images/icon_3.png"> 
+    <h2>
+        Удобные кресла
+    </h2>
+    <p>
         Gather round fellow authors!Hear the stories of success from your favorite authors and learn how they we able
         to tackle their problems and become successful.
-    </div>
-</div>
-<h2>
-    Выберите фильм
-</h2>
-<div>
+    </p>
+</section>
+<div class="chosefilms">
+    <h2>
+        Выберите фильм
+    </h2>
     <div>
         Time
+    </br>
         10am - 12pm
+    </br>
         12pm - 02pm
+    </br>
         02pm - 03pm
+    </br>
         03pm - 05pm
     </div>
     <div>
         Stuff that will happen
         Introduction and presentations about Envato
+    </br>
         Sessions by honorable guests and Speakers
+    </br>
         Break and Mingle time with the authors
+    </br>
         Portfolio Review, Rewards and Ending Presentation
     </div>
     <p>
         Please keep in mind that the timings may differ according to the flow of the event. The even is actually day long 
-        and we do plan to finish it within our set time but it doesn’t have to be, if we all agree to hangour for some time more, 
+        and we do plan to finish it within our set time but it doesn’t have to be, if we all agree to hangour 
+    </br>
+    for some time more, 
         what harm could it do? :)
     </p>
 </div>
-<div>
-    <h2>
-        Подарок каждому!
-    </h2>
-    <p>
-        Are you an Elite author in the Envato Marketplaces? If so we are proud of you! We want to give our thanks in achieving great 
-        success in the marketplace and we want to make known to the people of our country that you are amazing! Our Elite gifting 
-        program includes giving you special merchandize from our community and also promote your works in our community.
-    </p>
-    <p>
-        All you have to do is contact us by clicking the button here and then its just going to the event, saying something motivational
-        and taking that swag while looking amazing infront of thousands of other community members.
-    </p>
-    <p>
-        *Be advised, we will only give you Elite thank you swag for each level of elite you cross.That means if you do not cross to the 
-        next elite level before the next event, you cannot claim your prizes.
-    </p>
-    <div>
-        Получить подарок
+<section class="present">
+        <div class="logo2">
+            <img alt="сюрприз" title="подарок" src="images/Слой 4.png"> 
+        </div>
+    <div class="presentall">
+        <h2>
+            Подарок каждому!
+        </h2>
+    </br>
+    </br>
+    </br>
+        <p>
+            Are you an Elite author in the Envato Marketplaces? If so we are proud of you! We want to give our thanks in achieving great 
+            success in the marketplace and we want to make known to the people of our country that you are amazing! Our Elite gifting 
+            program includes giving you special merchandize from our community and also promote your works in our community.
+        </p>
+    </br>
+        <p>
+            All you have to do is contact us by clicking the button here and then its just going to the event, saying something 
+            motivational and taking that swag while looking amazing infront of thousands of other community members.
+        </p>
+    </br>
+        <p>
+            *Be advised, we will only give you Elite thank you swag for each level of elite you cross.That means if you do not cross to the 
+            next elite level before the next event, you cannot claim your prizes.
+        </p>
+        <div class="button">
+            <p>
+            Получить подарок
+            </p>
+        </div>
     </div>
-</div>
-<div>
+</section>
+<section class="films">
     <h2>
         Фильмы
     </h2>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum, laudantium neque nihil omnis 
-    perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!
+</br>
+</br>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum, 
+    </br>
+        laudantium neque nihil omnis 
+        perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!
+    </p>
+</section >
+<div class="logotyp1">
+    <a href="https://www.kinopoisk.ru/film/838/" target="_blank"><img alt="картинка вдруг не загрузилась" title="человек-паук" src="images/spider.jpg"> </a>
 </div>
-<div>
-        Hope we see you at the event!
-        All Rights Reserved. Envato Bangladesh © 2015
+<div class="logotyp2">
+    <a href="https://www.kinopoisk.ru/film/1122114/" target="_blank"><img alt="картинка вдруг не загрузилась" title="собачья жизнь 2" src="images/dog.jpg"></a> 
 </div>
-    
+<div class="logotyp3">
+    <a href="https://www.kinopoisk.ru/film/693730/" target="_blank"><img alt="картинка вдруг не загрузилась" title="Люди в черном: Интернэшнл" src="images/mib.jpg"></a> 
+</div>
+<div class="logotyp4">
+    <a href="https://www.kinopoisk.ru/film/838/" target="_blank"><img alt="картинка вдруг не загрузилась" title="человек-паук" src="images/spider.jpg"> </a>
+</div>
+<div class="logotyp5">
+    <a href="https://www.kinopoisk.ru/film/1122114/" target="_blank"><img alt="картинка вдруг не загрузилась" title="собачья жизнь 2" src="images/dog.jpg"></a>  
+</div>
+<div class="logotyp6">
+    <a href="https://www.kinopoisk.ru/film/693730/" target="_blank"><img alt="картинка вдруг не загрузилась" title="Люди в черном: Интернэшнл" src="images/mib.jpg"></a> 
+</div>
+<div class="logotyp7">
+    <a href="https://www.kinopoisk.ru/film/838/" target="_blank"><img alt="картинка вдруг не загрузилась" title="человек-паук" src="images/spider.jpg"> </a>
+</div>
+<div class="logotyp8">
+    <a href="https://www.kinopoisk.ru/film/1122114/" target="_blank"><img alt="картинка вдруг не загрузилась" title="собачья жизнь 2" src="images/dog.jpg"></a>  
+</div>
+<div class="logotyp9">
+    <a href="https://www.kinopoisk.ru/film/693730/" target="_blank"><img alt="картинка вдруг не загрузилась" title="Люди в черном: Интернэшнл" src="images/mib.jpg"></a> 
+</div>
+</br>
+<div class="icons">
+</br>
+</br>
+    <div class="iconss">
+        <img alt="картинка вдруг не загрузилась" title="facebook" src="images/facebook  .png">
+        <img alt="картинка вдруг не загрузилась" title="twitter"src="images/twitter.png">
+        <img alt="картинка вдруг не загрузилась" title="linkedin" src="images/linkedin.png">
+        <img alt="картинка вдруг не загрузилась" title="google plus"src="images/google plus .png">
+        <img alt="картинка вдруг не загрузилась" title="twitter"src="images/twitter.png">
+    </div>
+</br>
+       <p> 
+            Hope we see you at the event!
+       </p>
+       <footer>
+            All Rights Reserved. Envato Bangladesh © 2015
+       </footer>
+    </br>
+</br>
+</div> 
+<form>
+        <input type="text" name="client_name" value="dflt" placeholder="подсказка" >
+        <input type="text" name="client_surname" value="dflt" placeholder="подсказка" >
+        <select> 
+            <ortion>Выбор 1</ortion>
+            <ortion>Выбор 2</ortion>
+            <ortion>Выбор 3</ortion>
+        </select>
+        <label for="first">Выбор 1</label>
+        <input in="first" type="radio" value="1">
+        <label for="first">Выбор 2</label>
+        <input in="first" type="radio" value="1">
+        <textarea>
+            Тело тега
+        </textarea>
+        <input id="agree" type="checkbox">
+        <label in="agree"> Я согласен на обработку данных</label>
+
+
+    <label for="first">нечто 1</label>
+    <input in="first" type="radio" value="2" name="some" />
+
+    <label>нечто 1</label>
+    <input type="radio" value="3" name="some" />
+
+    <input type="submit" />
+    <button type="submit" >Отправить</button>
+
+</form>
+
 </body>
 
 </html>
