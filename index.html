@@ -14,6 +14,59 @@
 </head>
 
 <body class="basik">
+    <form id="auth" action="order.php"style="width:450px">
+        <div>
+            <input type="text" name="client_name" required  value="" placeholder="Имя" >
+        </div> 
+        <div>
+            <input type="email" name="email" required value="" placeholder="Email">
+        </div>
+        <div>
+            <select> 
+                <option>Выбор 1</option>
+                <option>Выбор 2</option>
+                <option>Выбор 3</option>
+                <option>Выбор 4</option>
+                <option>Выбор 5</option>
+                <option>Выбор 6</option>
+                <option>Выбор 7</option>
+                <option>Выбор 8</option>
+                <option>Выбор 9</option>
+                <option>Выбор 10</option>
+            </select>
+        </div>
+        <div>
+            <label for="first">Выбор 1</label>
+            <input in="first" type="radio" value="1">
+            <label for="first">Выбор 2</label>
+            <input in="first" type="radio" value="1">
+        </div>
+        <div>
+            <textarea>
+                Тело тега
+            </textarea>
+        </div>
+        <div>
+            <input id="agree" type="checkbox" required >
+            <label in="agree"> Я согласен на обработку данных</label>    
+        </div>
+        <div>
+            <input type="file"/>
+        </div>
+        <div>
+            <label for="first">нечто 1</label>
+            <input in="first" type="radio" value="2" name="some" />
+        </div>
+        <div>
+            <label>нечто 1</label>
+            <input type="radio" value="3" name="some" />
+        </div>
+
+    </form>
+    <div>
+            <input type="submit" value="Заказать" form="auth" />
+            <button type="submit" form="auth">Заказать</button>
+    </div>
 <div class="main"> 
     <div class="logo">
         <svg 
@@ -24,21 +77,20 @@
        </svg>
     </div>
     <ul class="nav">
-        <li><a href="#">EVENT DETAILS</a></li>
-        <li><a href="#">SPEAKERS</a></li>
-        <li><a href="#">SPONSORS</a></li>
-        <li><a href="#">PAST EVENTS</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#ЗАКАЗАТЬ БИЛЕТ">ЗАКАЗАТЬ БИЛЕТ</a></li>
+        <li><a href="#ПРЕИМУЩЕСТВА">ПРЕИМУЩЕСТВА</a></li>
+        <li><a href="#ФИЛЬМЫ">ФИЛЬМЫ </a></li>
+        <li><a href="#КОНТАКТЫ">КОНТАКТЫ</a></li>
     </ul>    
     <div class="whitetext">
-        <h1>
+        <h1><a name="ЗАКАЗАТЬ БИЛЕТ"></a>
             Закажите билет в кино
         </h1>
         <h2> 
             Всем покупателям подарок!
         </h2>
     </div> 
-    <article class="welcome">
+    <section class="welcome">
             <h2>
                 Добро пожаловать!
             </h2>
@@ -51,66 +103,97 @@
                 Cumque dolorem eum harum laudantium libero molestias saepe soluta? 
                 Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
             </p>
-    </article>
+    </section>
      
 </div>
- 
-<h2 class="what">Почему мы?</h2>
-<section class="icon_1">
-    <img alt="картинка вдруг не загрузилась" title="большие экраны" src="images/icon_1.png"> 
-    <h2>
-        Большие экраны
-    </h2>
-    <p>
-        Meet the Community you’ve always talked with, in real life! This meetup will be all about authors engaging 
-        each other with interesting coversation and topics. We will have loads of fun.
-    </p>
-</section>
-<section class="icon_2">
-    <img alt="картинка вдруг не загрузилась" title="объемный звук" src="images/icon_2.png"> 
-    <h2>
-        Объемный звук
-    </h2>
-    <p>
-        In this meetup you will get to know the marketplaces better, because that’s why were all here for right?
-        Learn a few tips and tricks from experienced authors from all over the country.
-    </p>
-</section>
-<section class="icon_3">
-    <img alt="картинка вдруг не загрузилась" title="удобные кресла" src="images/icon_3.png"> 
-    <h2>
-        Удобные кресла
-    </h2>
-    <p>
-        Gather round fellow authors!Hear the stories of success from your favorite authors and learn how they we able
-        to tackle their problems and become successful.
-    </p>
-</section>
+ <article>
+    <h2 class="what"><a name="ПРЕИМУЩЕСТВА"></a>
+        Почему мы?
+    </h2> 
+    <section class="icon_1">
+        <img alt="картинка вдруг не загрузилась" title="большие экраны" src="images/icon_1.png"> 
+        <h3>
+            Большие экраны
+        </h3>
+        <p>
+            Meet the Community you’ve always talked with, in real life! This meetup will be all about authors engaging 
+            each other with interesting coversation and topics. We will have loads of fun.
+        </p>
+    </section>
+    <section class="icon_2">
+        <img alt="картинка вдруг не загрузилась" title="объемный звук" src="images/icon_2.png"> 
+        <h3>
+            Объемный звук
+        </h3>
+        <p>
+            In this meetup you will get to know the marketplaces better, because that’s why were all here for right?
+            Learn a few tips and tricks from experienced authors from all over the country.
+        </p>
+    </section>
+    <section class="icon_3">
+        <img alt="картинка вдруг не загрузилась" title="удобные кресла" src="images/icon_3.png"> 
+        <h3>
+            Удобные кресла
+        </h3>
+        <p>
+         Gather round fellow authors!Hear the stories of success from your favorite authors and learn how they we able
+            to tackle their problems and become successful.
+        </p>
+    </section>
+</article>
+<div>
+    
+</div>
 <div class="chosefilms">
-    <h2>
+    <h2><a name="ФИЛЬМЫ"></a>
         Выберите фильм
     </h2>
-    <div>
-        Time
-    </br>
-        10am - 12pm
-    </br>
-        12pm - 02pm
-    </br>
-        02pm - 03pm
-    </br>
-        03pm - 05pm
-    </div>
-    <div>
-        Stuff that will happen
-        Introduction and presentations about Envato
-    </br>
-        Sessions by honorable guests and Speakers
-    </br>
-        Break and Mingle time with the authors
-    </br>
-        Portfolio Review, Rewards and Ending Presentation
-    </div>
+    <table cellspacing="2" cellpadding="7" border="1">
+        <thead align="centre">
+            <tr>
+                <th>
+                    Time    
+                </th>
+                <th>
+                    Stuff that will happen
+                </th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                10am - 12pm 
+            </td>
+            <td>
+                Introduction and presentations about Envato
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                12pm - 02pm 
+            </td>
+            <td>
+                Sessions by honorable guests and Speakers
+            </td>
+        </tr>
+        <tr>
+            <td>
+                02pm - 03pm 
+            </td>
+            <td>
+                Break and Mingle time with the authors
+            </td>
+        </tr>
+        <tr>
+            <td>
+                03pm - 05pm 
+            </td>
+            <td>
+                Portfolio Review, Rewards and Ending Presentation
+            </td>
+        </tr>
+    </table>
+
     <p>
         Please keep in mind that the timings may differ according to the flow of the event. The even is actually day long 
         and we do plan to finish it within our set time but it doesn’t have to be, if we all agree to hangour 
@@ -213,35 +296,7 @@
     </br>
 </br>
 </div> 
-<form>
-        <input type="text" name="client_name" value="dflt" placeholder="подсказка" >
-        <input type="text" name="client_surname" value="dflt" placeholder="подсказка" >
-        <select> 
-            <ortion>Выбор 1</ortion>
-            <ortion>Выбор 2</ortion>
-            <ortion>Выбор 3</ortion>
-        </select>
-        <label for="first">Выбор 1</label>
-        <input in="first" type="radio" value="1">
-        <label for="first">Выбор 2</label>
-        <input in="first" type="radio" value="1">
-        <textarea>
-            Тело тега
-        </textarea>
-        <input id="agree" type="checkbox">
-        <label in="agree"> Я согласен на обработку данных</label>
 
-
-    <label for="first">нечто 1</label>
-    <input in="first" type="radio" value="2" name="some" />
-
-    <label>нечто 1</label>
-    <input type="radio" value="3" name="some" />
-
-    <input type="submit" />
-    <button type="submit" >Отправить</button>
-
-</form>
 
 </body>
 
