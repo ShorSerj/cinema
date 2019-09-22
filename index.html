@@ -13,195 +13,205 @@
     
 </head>
 
-<body class="basik">
-    <form id="auth" action="order.php"style="width:450px">
-        <div>
-            <input type="text" name="client_name" required  value="" placeholder="Имя" >
-        </div> 
-        <div>
-            <input type="email" name="email" required value="" placeholder="Email">
+<body>
+    <div class="main"> 
+        <div class="logo">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="188px" height="45px">
+            <a href="http://university.innopolis.ru/"><image alt="Иннополис" title="иннополис" x="0px" y="0px" width="188px" height="45px"  xlink:href="data:img/png;base64,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" /></a>
+        </svg>
         </div>
-        <div>
-            <select> 
-                <option>Выбор 1</option>
-                <option>Выбор 2</option>
-                <option>Выбор 3</option>
-                <option>Выбор 4</option>
-                <option>Выбор 5</option>
-                <option>Выбор 6</option>
-                <option>Выбор 7</option>
-                <option>Выбор 8</option>
-                <option>Выбор 9</option>
-                <option>Выбор 10</option>
-            </select>
-        </div>
-        <div>
-            <label for="first">Выбор 1</label>
-            <input in="first" type="radio" value="1">
-            <label for="first">Выбор 2</label>
-            <input in="first" type="radio" value="1">
-        </div>
-        <div>
-            <textarea>
-                Тело тега
-            </textarea>
-        </div>
-        <div>
-            <input id="agree" type="checkbox" required >
-            <label in="agree"> Я согласен на обработку данных</label>    
-        </div>
-        <div>
-            <input type="file"/>
-        </div>
-        <div>
-            <label for="first">нечто 1</label>
-            <input in="first" type="radio" value="2" name="some" />
-        </div>
-        <div>
-            <label>нечто 1</label>
-            <input type="radio" value="3" name="some" />
-        </div>
-
-    </form>
-    <div>
-            <input type="submit" value="Заказать" form="auth" />
-            <button type="submit" form="auth">Заказать</button>
-    </div>
-<div class="main"> 
-    <div class="logo">
-        <svg 
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="188px" height="45px">
-        <a href="http://university.innopolis.ru/"><image alt="Иннополис" title="иннополис" x="0px" y="0px" width="188px" height="45px"  xlink:href="data:img/png;base64,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" /></a>
-       </svg>
-    </div>
-    <ul class="nav">
-        <li><a href="#ЗАКАЗАТЬ БИЛЕТ">ЗАКАЗАТЬ БИЛЕТ</a></li>
-        <li><a href="#ПРЕИМУЩЕСТВА">ПРЕИМУЩЕСТВА</a></li>
-        <li><a href="#ФИЛЬМЫ">ФИЛЬМЫ </a></li>
-        <li><a href="#КОНТАКТЫ">КОНТАКТЫ</a></li>
-    </ul>    
-    <div class="whitetext">
-        <h1><a name="ЗАКАЗАТЬ БИЛЕТ"></a>
-            Закажите билет в кино
-        </h1>
-        <h2> 
-            Всем покупателям подарок!
-        </h2>
-    </div> 
-    <section class="welcome">
-            <h2>
-                Добро пожаловать!
+        <ul class="nav">
+            <li><a href="#ЗАКАЗАТЬ БИЛЕТ">ЗАКАЗАТЬ БИЛЕТ</a></li>
+            <li><a href="#ПРЕИМУЩЕСТВА">ПРЕИМУЩЕСТВА</a></li>
+            <li><a href="#ФИЛЬМЫ">ФИЛЬМЫ </a></li>
+            <li><a href="#КОНТАКТЫ">КОНТАКТЫ</a></li>
+        </ul>    
+        <div class="whitetext">
+            <h1><a name="ЗАКАЗАТЬ БИЛЕТ"></a>
+                Закажите билет в кино
+            </h1>
+            <h2> 
+                Всем покупателям подарок!
             </h2>
-        </br>
+        </div> 
+        <section class="welcome">
+                <h2>
+                    Добро пожаловать!
+                </h2>
+            </br>
+                <p>
+                    Cumque dolorem eum harum laudantium libero molestias saepe soluta? 
+                    Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
+                </p>
+                <p>
+                    Cumque dolorem eum harum laudantium libero molestias saepe soluta? 
+                    Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
+                </p>
+        </section>
+        
+    </div>
+    <article>
+        <div>
+            <h2 class="what"><a name="ПРЕИМУЩЕСТВА"></a>
+                Почему мы?
+            </h2> 
+        <section class="icon_1">
+            <img alt="картинка вдруг не загрузилась" title="большие экраны" src="images/icon_1.png"> 
+            <h3>
+                Большие экраны
+            </h3>
             <p>
-                Cumque dolorem eum harum laudantium libero molestias saepe soluta? 
-                Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
+                Meet the Community you’ve always talked with, in real life! This meetup will be all about authors engaging 
+                each other with interesting coversation and topics. We will have loads of fun.
             </p>
+        </section>
+        <section class="icon_2">
+            <img alt="картинка вдруг не загрузилась" title="объемный звук" src="images/icon_2.png"> 
+            <h3>
+                Объемный звук
+            </h3>
             <p>
-                Cumque dolorem eum harum laudantium libero molestias saepe soluta? 
-                Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
+                In this meetup you will get to know the marketplaces better, because that’s why were all here for right?
+                Learn a few tips and tricks from experienced authors from all over the country.
             </p>
-    </section>
-     
-</div>
- <article>
-    <h2 class="what"><a name="ПРЕИМУЩЕСТВА"></a>
-        Почему мы?
-    </h2> 
-    <section class="icon_1">
-        <img alt="картинка вдруг не загрузилась" title="большие экраны" src="images/icon_1.png"> 
-        <h3>
-            Большие экраны
-        </h3>
-        <p>
-            Meet the Community you’ve always talked with, in real life! This meetup will be all about authors engaging 
-            each other with interesting coversation and topics. We will have loads of fun.
-        </p>
-    </section>
-    <section class="icon_2">
-        <img alt="картинка вдруг не загрузилась" title="объемный звук" src="images/icon_2.png"> 
-        <h3>
-            Объемный звук
-        </h3>
-        <p>
-            In this meetup you will get to know the marketplaces better, because that’s why were all here for right?
-            Learn a few tips and tricks from experienced authors from all over the country.
-        </p>
-    </section>
-    <section class="icon_3">
-        <img alt="картинка вдруг не загрузилась" title="удобные кресла" src="images/icon_3.png"> 
-        <h3>
-            Удобные кресла
-        </h3>
-        <p>
-         Gather round fellow authors!Hear the stories of success from your favorite authors and learn how they we able
-            to tackle their problems and become successful.
-        </p>
-    </section>
-</article>
-<div>
-    
-</div>
-<div class="chosefilms">
-    <h2><a name="ФИЛЬМЫ"></a>
-        Выберите фильм
-    </h2>
-    <table cellspacing="2" cellpadding="7" border="1">
-        <thead align="centre">
-            <tr>
-                <th>
-                    Time    
-                </th>
-                <th>
-                    Stuff that will happen
-                </th>
-            </tr>
-        </thead>
-        <tr>
-            <td>
-                10am - 12pm 
-            </td>
-            <td>
-                Introduction and presentations about Envato
-            </td>
-            
-        </tr>
-        <tr>
-            <td>
-                12pm - 02pm 
-            </td>
-            <td>
-                Sessions by honorable guests and Speakers
-            </td>
-        </tr>
-        <tr>
-            <td>
-                02pm - 03pm 
-            </td>
-            <td>
-                Break and Mingle time with the authors
-            </td>
-        </tr>
-        <tr>
-            <td>
-                03pm - 05pm 
-            </td>
-            <td>
-                Portfolio Review, Rewards and Ending Presentation
-            </td>
-        </tr>
-    </table>
-
-    <p>
-        Please keep in mind that the timings may differ according to the flow of the event. The even is actually day long 
-        and we do plan to finish it within our set time but it doesn’t have to be, if we all agree to hangour 
-    </br>
-    for some time more, 
-        what harm could it do? :)
-    </p>
-</div>
+        </section>
+        <section class="icon_3">
+            <img alt="картинка вдруг не загрузилась" title="удобные кресла" src="images/icon_3.png"> 
+            <h3>
+                Удобные кресла
+            </h3>
+            <p>
+                Gather round fellow authors!Hear the stories of success from your favorite authors and learn how they we able
+                to tackle their problems and become successful.
+            </p>
+        </div>
+        </section>
+    </article>
+    <section>
+            <div class="movie-list">
+                <h2 class="movie-list__header"><a name="ФИЛЬМЫ"></a>
+                    Выберите фильм
+                </h2>
+                <div class="container">
+                    <table class="movie-list__table">
+                        <thead class="movie-list__thead">
+                            <tr>
+                                <th class="time_head">
+                                    <a href="#">
+                                        Начало сеанса 
+                                    </a>
+                                </th>
+                                <th class="stuff_head">
+                                    <a href="#">
+                                        Название фильма
+                                    </a>
+                                </th>
+                                <th class="genre_head">
+                                    <a href="#">
+                                        Жанр
+                                    </a>
+                                </th>
+                                <th class="plus_head">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td class="time">
+                                    10:00
+                                </td>
+                                <td class="stuff">
+                                    <a href="https://www.kinopoisk.ru/film/838/" target="_blank">
+                                        Человек-паук
+                                    </a>
+                                </td>
+                                <td class="genre">
+                                    фантастика, боевик, приключения
+                                </td>
+                                <td class="plus">
+                                    <svg 
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="33px" height="33px">
+                                        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                        d="M16.505,32.994 C7.393,32.994 0.005,25.607 0.005,16.494 C0.005,7.381 7.393,-0.006 16.505,-0.006 C25.618,-0.006 33.005,7.381 33.005,16.494 C33.005,25.607 25.618,32.994 16.505,32.994 ZM24.214,14.591 L18.356,14.631 L18.356,8.796 L13.958,8.777 L13.958,14.637 L8.083,14.637 L8.083,19.074 L13.958,19.074 L13.958,24.889 L18.336,24.889 L18.307,19.074 L24.231,19.074 L24.214,14.591 Z"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time">
+                                    12:00		
+                                </td>
+                                <td class="stuff">
+                                    <a href="https://www.kinopoisk.ru/film/1122114/" target="_blank">
+                                        Собачья жизнь 2
+                                    </a>
+                                </td>
+                                <td class="genre">
+                                    фэнтези, драма, комедия
+                                </td>
+                                <td class="plus">
+                                    <svg 
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="33px" height="33px">
+                                        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                        d="M16.505,32.994 C7.393,32.994 0.005,25.607 0.005,16.494 C0.005,7.381 7.393,-0.006 16.505,-0.006 C25.618,-0.006 33.005,7.381 33.005,16.494 C33.005,25.607 25.618,32.994 16.505,32.994 ZM24.214,14.591 L18.356,14.631 L18.356,8.796 L13.958,8.777 L13.958,14.637 L8.083,14.637 L8.083,19.074 L13.958,19.074 L13.958,24.889 L18.336,24.889 L18.307,19.074 L24.231,19.074 L24.214,14.591 Z"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time">
+                                    14:00		
+                                </td>
+                                <td class="stuff">
+                                    <a href="https://www.kinopoisk.ru/film/846824/" target="_blank">
+                                        История игрушек 4
+                                    </a>
+                                </td>
+                                <td class="genre">
+                                    мультфильм, фэнтези, комедия
+                                </td>
+                                <td class="plus">
+                                    <svg 
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="33px" height="33px">
+                                        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                        d="M16.505,32.994 C7.393,32.994 0.005,25.607 0.005,16.494 C0.005,7.381 7.393,-0.006 16.505,-0.006 C25.618,-0.006 33.005,7.381 33.005,16.494 C33.005,25.607 25.618,32.994 16.505,32.994 ZM24.214,14.591 L18.356,14.631 L18.356,8.796 L13.958,8.777 L13.958,14.637 L8.083,14.637 L8.083,19.074 L13.958,19.074 L13.958,24.889 L18.336,24.889 L18.307,19.074 L24.231,19.074 L24.214,14.591 Z"/>
+                                    </svg>
+                                </td> 		
+                            </tr>
+                            <tr>	
+                                <td class="time">
+                                    16:00	
+                                </td>
+                                <td class="stuff">
+                                    <a href="https://www.kinopoisk.ru/film/693730/" target="_blank">
+                                        Люди в черном: Интернэшнл
+                                    </a>
+                                </td>
+                                <td class="genre">
+                                    фантастика, боевик, комедия
+                                </td>
+                                <td class="plus">
+                                    <svg 
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="33px" height="33px">
+                                        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                        d="M16.505,32.994 C7.393,32.994 0.005,25.607 0.005,16.494 C0.005,7.381 7.393,-0.006 16.505,-0.006 C25.618,-0.006 33.005,7.381 33.005,16.494 C33.005,25.607 25.618,32.994 16.505,32.994 ZM24.214,14.591 L18.356,14.631 L18.356,8.796 L13.958,8.777 L13.958,14.637 L8.083,14.637 L8.083,19.074 L13.958,19.074 L13.958,24.889 L18.336,24.889 L18.307,19.074 L24.231,19.074 L24.214,14.591 Z"/>
+                                    </svg>
+                                </td> 
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 <section class="present">
         <div class="logo2">
             <img alt="сюрприз" title="подарок" src="images/Слой 4.png"> 
@@ -296,6 +306,59 @@
     </br>
 </br>
 </div> 
+<form id="auth" action="order.php"style="width:450px">
+        <div>
+            <input type="text" name="client_name" required  value="" placeholder="Имя" >
+        </div> 
+        <div>
+            <input type="email" name="email" required value="" placeholder="Email">
+        </div>
+        <div>
+            <select> 
+                <option>Выбор 1</option>
+                <option>Выбор 2</option>
+                <option>Выбор 3</option>
+                <option>Выбор 4</option>
+                <option>Выбор 5</option>
+                <option>Выбор 6</option>
+                <option>Выбор 7</option>
+                <option>Выбор 8</option>
+                <option>Выбор 9</option>
+                <option>Выбор 10</option>
+            </select>
+        </div>
+        <div>
+            <label for="first">Выбор 1</label>
+            <input in="first" type="radio" value="1">
+            <label for="first">Выбор 2</label>
+            <input in="first" type="radio" value="1">
+        </div>
+        <div>
+            <textarea>
+                Тело тега
+            </textarea>
+        </div>
+        <div>
+            <input id="agree" type="checkbox" required >
+            <label in="agree"> Я согласен на обработку данных</label>    
+        </div>
+        <div>
+            <input type="file"/>
+        </div>
+        <div>
+            <label for="first">нечто 1</label>
+            <input in="first" type="radio" value="2" name="some" />
+        </div>
+        <div>
+            <label>нечто 1</label>
+            <input type="radio" value="3" name="some" />
+        </div>
+
+    </form>
+    <div>
+            <input type="submit" value="Заказать" form="auth" />
+            <button type="submit" form="auth">Заказать</button>
+    </div>
 
 
 </body>
