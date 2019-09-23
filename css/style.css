@@ -25,6 +25,15 @@ body, p, h1, h2, h3, h4, h5, h6 {
     float: left;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+    clear: both;
+  }
+
 .nav {
  /*   border: solid 1px greenyellow; */
     margin-left: 258px;
@@ -32,11 +41,14 @@ body, p, h1, h2, h3, h4, h5, h6 {
     float: left;
 }
 
+
+
 .nav li {
   /*  border: solid 1px blueviolet; */
     float: left;
     margin-right: 38px;
     list-style-type: none;
+    
 }
 
 .nav li a{
@@ -46,7 +58,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 
 .whitetext {
     color: white;
-    padding-top: 170px;
+    padding-top: 185px;
     text-align: center;
 }
 
@@ -73,6 +85,11 @@ body, p, h1, h2, h3, h4, h5, h6 {
     font-size: 40pt;
     font-weight: bold;
 }
+.why_us::after { 
+    content: "";
+    clear: both; 
+    display: block; 
+  }
 
 .what {
     margin-left: 173px;
@@ -111,13 +128,8 @@ body, p, h1, h2, h3, h4, h5, h6 {
     font-size: 50px;
     color: #252525;
     font-weight: 700;
-    margin:626px 0 76px;
+    margin:130px 0 76px;
     text-align: center;
-}
-
-.container {
-    max-width: 1030px;
-    margin-left: 247px;
 }
 
 .movie-list__table {
@@ -126,6 +138,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
     border-radius: 15px;
     overflow: hidden;
     table-layout: fixed;
+    margin: 0 auto;
 }
 
 .movie-list__thead {
@@ -273,14 +286,15 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .logo2 {
-    margin-left: 10%;
+    margin-left: 12.5%;
     float: left;
+    overflow: hidden;
 }
 
 .presentall {
     height: 535px;
-    width: 835px;
-    padding-left: 40%;
+    width: 100%;
+    padding: 5px 12% 0 39%;
 
 }
 
@@ -323,6 +337,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
     margin-left: 15%;
     margin-right: 5%;
     float: left;
+    width: 296px;
 }
 .logotyp2 {
     padding-top: 75px;
