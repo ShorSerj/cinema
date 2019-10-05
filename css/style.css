@@ -363,46 +363,66 @@ textarea {
 }
 /* \Reset CSS*/
 
+/** Шрифты */
 @font-face {
     font-family: 'Roboto';
-    font-display: swap;
-    src: url(../fonts/Roboto-Black.ttf) format("truetype");
+    src: url('../fonts/Roboto-Black.eot');
+    src: local('Roboto Black'), local('Roboto-Black'),
+        url('../fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Black.woff') format('woff'),
+        url('../fonts/Roboto-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    font-display: swap;
-    src: url(../fonts/Roboto-Bold.ttf) format("truetype");
+    src: url('../fonts/Roboto-Bold.eot');
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
     font-weight: 700;
-    font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    font-display: swap;
-    src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+    src: url('../fonts/Roboto-Regular.eot');
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
     font-weight: 400;
-    font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    font-display: swap;
-    src: url(../fonts/Roboto-Light.ttf) format("truetype");
+    src: url('../fonts/Roboto-Light.eot');
+    src: local('Roboto Light'), local('Roboto-Light'),
+        url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Light.woff') format('woff'),
+        url('../fonts/Roboto-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    font-display: swap;
-    src: url(../fonts/Roboto-Thin.ttf) format('truetype');
+    src: url('../fonts/Roboto-Thin.eot');
+    src: local('Roboto Thin'), local('Roboto-Thin'),
+        url('../fonts/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Thin.woff') format('woff'),
+        url('../fonts/Roboto-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
+/** \Шрифты */
 
+/** Общие стили */
 * {
     box-sizing: border-box;
 }
@@ -418,14 +438,17 @@ h2 {
 }
 
 h3 {
-    margin-top: 42px;
+    margin-top: 129px;
     font-weight: 900;
     font-size: 35px;
 }
 
 a{ 
     color: white;
-    text-decoration:none;      
+    text-decoration:none;  
+}
+a:hover{ 
+    color: #90d23d;   
 }
 
 p {
@@ -433,10 +456,12 @@ p {
     font-size: 14px;
 }
 
+/** \Общие стили */
+
 .main {
     background: url("../images/background.jpg");
     background-size: 100%;
-    height: 769px;
+    padding-bottom: 361px;
 }
 
 .main__logo {
@@ -445,7 +470,7 @@ p {
     left: 12%;
     top: 54px;
     width: 188px;
-    height: 45px;
+    padding-bottom: 45px;
 }
 
 .main__menu:before,
@@ -489,10 +514,8 @@ p {
     left: 50%;
     top: 639px;
     width: 516px;
-    height: 267px;  
-    padding: 25px 81px 36px 30px;
+    padding: 25px 81px 41px 30px;
 }
-
 .main__welcome h2 {
     font-size: 40px;
     padding-bottom: 15px;
@@ -512,31 +535,40 @@ p {
     display: block; 
   }
 
+.container {
+    width: 1030px;
+    margin: 0 auto;
+}
 .advantages__head {
     margin: 83px 0 0 173px;
 }
 
-.advantages__first {
-    margin-top: 135px;
-    float: left;
-    margin-left: 14%;
-    width: 283px;
-    
-    
+.advantages__overflow{
+    overflow: hidden;
 }
 
-.advantages__second {
+.advantages__enumeration {
     margin-top: 135px;
     float: left;
-    margin-left: 14%;
-    width: 283px;
+    width: 28%;
+}
+ 
+.indent {
+    margin-left:73px;
+    margin-right:73px;
+}
+.advantages__enumeration-image-wrap {
+    position: relative;
+    margin-bottom: 40px;
 }
 
-.advantages__third {
-    margin-top: 135px;
-    float: left;
-    margin-left: 14%;
-    width: 283px;
+.advantages__enumeration-image-wrap img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .movie {
@@ -575,7 +607,7 @@ p {
     content: ' ';
     width: 0;
     height: 0;
-    border-style: solid;
+    border-width: 0 7.5px 14.4px 7.5px;
     border-color: transparent transparent #ffffff transparent;
     pointer-events: none;
 }
@@ -588,7 +620,7 @@ p {
 }
 
 .movie__table__thead-time:before {
-    border-width: 0 7.5px 14.4px 7.5px;
+    border-style: solid;
 }
 
 .movie__table__thead-time a {
@@ -606,7 +638,7 @@ p {
 }
 
 .movie__table__thead-stuff:before {
-    border-width: 0 7.5px 14.4px 7.5px;
+    border-style: solid;
 }
 
 .movie__table__thead-stuff a {
@@ -622,19 +654,8 @@ p {
     text-decoration:none;
 }
 
-.movie__table__thead-genre a {
-    color: white;
-    text-decoration:none;
-}
-
-
 .movie__table__thead-plus {
     width: 136px;
-}
-
-.movie__table__tbody a {
-    color: white;
-    text-decoration:none;
 }
 
 .movie__table__tbody-time{
@@ -697,7 +718,7 @@ p {
     background: url("../images/background2.jpg");
     background-size: 100%;
     margin-top: 155px;
-    height: 750px;
+    padding-bottom: 174px;
 }
 
 .present h2 {
@@ -721,7 +742,6 @@ p {
 }
 
 .present_each {
-    height: 535px;
     width: 100%;
     padding: 5px 12% 0 39%;
 }
@@ -732,15 +752,14 @@ p {
 
 .present__button {
     width: 220px;
-    height: 55px;
     background: url("../images/button.png");
     margin-left: 525px;
-    padding: 4px 40px 0 0;
 }
 
 .present__button p {
-    padding-top: 15px;
-    padding-right: 0x;
+    padding: 16px 30px 16px 33px;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .films {
@@ -775,8 +794,17 @@ p {
     padding-left: 42%;
 }
 
+.relations_icons svg{
+    margin-top: 55px;
+    width: 47px; 
+    height: 47px;
+}
+
 .relations p {
+    padding-top:34px;
     text-align: center;
+    line-height: 20px;
+    padding-bottom:41px;
 }
 
 .relations footer {
