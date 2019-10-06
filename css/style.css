@@ -34,6 +34,8 @@ footer, header, hgroup, menu, nav, section {
 body {
     font-family: 'Roboto';
     line-height: 1.2;
+    width: 1366px;
+    margin: 0 auto;
 }
 
 ol, ul {
@@ -429,18 +431,21 @@ textarea {
 
 h1 {
     font-weight: 100;
-    font-size: 93px;
+    font-size: 80px;
+    padding-left: 267px;
+    letter-spacing: 0.38px;
 }
 
 h2 {
     font-weight: 700;
     font-size: 50px;
+
 }
 
 h3 {
-    margin-top: 129px;
     font-weight: 900;
     font-size: 35px;
+    margin: 38px 0 0 6px;
 }
 
 a{ 
@@ -460,14 +465,14 @@ p {
 
 .main {
     background: url("../images/background.jpg");
-    background-size: 100%;
-    padding-bottom: 361px;
+    padding-bottom: 358px;
+    position: relative;
 }
 
 .main__logo {
     background-image: url("../images/logo.png");
     position: absolute;
-    left: 12%;
+    left: 170px;
     top: 54px;
     width: 188px;
     padding-bottom: 45px;
@@ -484,7 +489,7 @@ p {
 
 .main__menu-list {
  /*   border: solid 1px greenyellow; */
-    margin-left: 45%;
+    margin-left: 618px;
     padding-top: 70px;
 }
 
@@ -499,35 +504,33 @@ p {
 
 .main__head {
     color: white;
-    padding-top: 185px;
-    text-align: center;
+    padding-top: 167px;
 }
 
 .main__head h2 {
     font-weight: 400;
+    padding-left: 351px;
+    letter-spacing: 0.38px;
 }
 
 .main__welcome {
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
     position: absolute;
-    left: 50%;
-    top: 639px;
+    left: 686px;
+    top: 640px;
     width: 516px;
-    padding: 25px 81px 41px 30px;
+    padding: 30px 86px 41px 32px;
 }
 .main__welcome h2 {
     font-size: 40px;
-    padding-bottom: 15px;
+    padding-bottom: 13px;
 }
 
 .main__welcome p {
-    padding-top: 17px;
+    padding-top: 16px;
 }
 
-.advantages p {
-    margin-top: 13px;
-}
 
 .advantages::after { 
     content: "";
@@ -537,10 +540,10 @@ p {
 
 .container {
     width: 1030px;
-    margin: 0 auto;
+    margin-left: 171px;
 }
 .advantages__head {
-    margin: 83px 0 0 173px;
+    margin: 74px 0 0 0;
 }
 
 .advantages__overflow{
@@ -548,30 +551,58 @@ p {
 }
 
 .advantages__enumeration {
-    margin-top: 135px;
+    margin-top: 118px;
+    float: left;
+    width: 29%;
+
+}
+
+.advantages p {
+    margin: 15px 0 0 0px;
+    text-align: center;
+}
+
+.advantages__enumeration-image-scren1 {
+    margin-left: 54px;
+    margin-top: 3px;
+}
+
+.indent {
+    margin-left: 63px;
+    margin-right:73px;
+}
+
+.advantages__enumeration-image-scren2 {
+    margin-left: 68px;
+}
+
+.indent h3 {
+    margin: 40px 0 0 17px;
+}
+
+.indent p {
+    margin: 13px 0 0 3px;
+    text-align: center;
+}
+
+.advantages__enumeration-third{
+    margin-top: 148px;
     float: left;
     width: 28%;
 }
- 
-.indent {
-    margin-left:73px;
-    margin-right:73px;
-}
-.advantages__enumeration-image-wrap {
-    position: relative;
-    margin-bottom: 40px;
+.advantages__enumeration-image-scren3 {
+    margin-left: 49px;
 }
 
-.advantages__enumeration-image-wrap img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+.advantages__enumeration-third h3 {
+    margin: 40px 0 0 9px;
 }
-
 .movie {
+    text-align: center;
+}
+
+.advantages__enumeration-third p {
+    margin: 13px 0 0 3px;
     text-align: center;
 }
 
@@ -579,7 +610,7 @@ p {
     font-size: 50px;
     color: #252525;
     font-weight: 700;
-    margin:128px 0 76px;
+    margin: 121px 0 77px 0;
     text-align: center;
 }
 
@@ -616,7 +647,7 @@ p {
     width: 235px;
     text-align: center;
     position: absolute;
-    padding: 24px 24px 24px 0;
+    padding: 24px 24px 16px 0;
 }
 
 .movie__table__thead-time:before {
@@ -629,7 +660,7 @@ p {
 }
 
 .movie__table__thead-stuff {
-    padding: 24px;
+    padding: 24px 24px 16px 24px;
     text-align: center;
     width: 337px;
     position: relative;
@@ -662,6 +693,7 @@ p {
     width: 225px;
     word-wrap:break-word;
     vertical-align: 0%;
+    padding: 24px 0 22px 0;
 }
 
 .movie__table__tbody-stuff {
@@ -711,40 +743,44 @@ p {
 
 .movie__caution {
     width: 830px;
-    margin: 33px auto;
+    margin: 35px auto;
+    line-height: 1.16
 }
 
 .present {
     background: url("../images/background2.jpg");
-    background-size: 100%;
-    margin-top: 155px;
+    margin-top: 153px;
     padding-bottom: 174px;
 }
 
+.present_each {
+    width: 100%;
+    padding: 3px 164px 0 530px;
+}
+
 .present h2 {
-    padding-top: 150px;
-    text-align: center;
+    padding: 130px 0 0 112px;
+    text-align: right;
     color: white;
-    font-size: 40pt;
-    padding-bottom: 55px;
+    font-size: 50px;
+    padding-bottom: 53px;
+    font-weight: 900;
 }
 
 .present p {
     text-align: right;
     color: white;
     padding-bottom: 17px;
+    padding-right: 3px;
 }
 
 .present__logo {
-    margin-left: 12.5%;
+    margin: -68px 0 0 170px;
     float: left;
     overflow: hidden;
 }
 
-.present_each {
-    width: 100%;
-    padding: 5px 12% 0 39%;
-}
+
 
 .getpresent {
     text-align: "right";
@@ -753,32 +789,33 @@ p {
 .present__button {
     width: 220px;
     background: url("../images/button.png");
-    margin-left: 525px;
+    margin: 21px 0 0 453px;
 }
 
 .present__button p {
-    padding: 16px 30px 16px 33px;
+    padding: 17px 32px 16px 32px;
     font-weight: 400;
     font-size: 18px;
 }
 
 .films {
-    margin-top: 90px;
-    margin-left: 200px;
+    margin-top: 83px;
+    margin-left: 198px;
 }
 .films p{
     width: 658px;
+    margin: 34px 2px;
 }
 
 .films__logotyp {
-    margin: 84px 232px 0 232px;
+    margin: 78px 0 0 201px;
 }
 
 .films__logotyp li{
     display:block;
     float:left;
-    margin-left: 41px;
-    margin-bottom: 40px;
+    margin-right: 41px;
+    margin-bottom: 41px;
 }
 
 .clear {
@@ -791,20 +828,26 @@ p {
 }
 
 .relations_icons {
-    padding-left: 42%;
+    padding: 61px 0 0 543px;
 }
 
 .relations_icons svg{
-    margin-top: 55px;
+    margin-left: 9px;
     width: 47px; 
     height: 47px;
 }
-
+.relations__text {
+    width: 378px;
+    margin-left: 507px;
+}
 .relations p {
-    padding-top:34px;
+    padding-top: 27px;
     text-align: center;
     line-height: 20px;
-    padding-bottom:41px;
+    padding-bottom: 41px;
+    padding-left: 0;
+    font-size: 18px;
+    color: white;
 }
 
 .relations footer {
