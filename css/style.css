@@ -787,19 +787,29 @@ p {
     font-weight: 400;
     font-size: 18px;
 }
+
+.films {
+    margin-top: 86px;
+    padding-left: 200px;
+}
+.films p {
+    margin-top: 33px;
+    width: 660px;
+    margin-bottom: 77px;
+}
 .movie-grid {
-    width: 1030px;
+    width: 1006px;
     margin: 0 auto;
     padding: 0 18px;
 }
 .movie-grid_flex {
-    display:flex;
-    margin: 0 -18px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 42px;
+    grid-row-gap: 42px;
 }
 
 .movie-grid_item {
-    padding: 18px;
 }
 .movie-grid_item:hover .movie-grid_description {
     bottom: 0;
@@ -861,7 +871,7 @@ p {
 }
 
 .relations_icons {
-    padding: 61px 0 0 543px;
+    padding: 61px 0 0 532px;
 }
 
 .relations_icons svg{
@@ -872,12 +882,12 @@ p {
 
 .relations__text {
     width: 378px;
-    margin-left: 507px;
+    margin-left: 495px;
 }
 .relations__text p {
-    padding-top: 27px;
+    padding-top: 26px;
     text-align: center;
-    line-height: 20px;
+    line-height: 21px;
     padding-bottom: 41px;
     padding-left: 0;
     font-size: 18px;
