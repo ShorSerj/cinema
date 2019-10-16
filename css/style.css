@@ -835,17 +835,20 @@ p {
     margin-top: 3.5rem;
     padding-left: 10rem;
 }
+
 .films p {
     margin-top: 1.65rem;
     width: 33rem;
     margin-bottom: 3.85rem;
 }
+
 .movie-grid {
     width: 50.3rem;
     margin: 0 auto;
     padding: 0 1.3rem;
     min-height: 80vh;
 }
+
 .movie-grid_flex {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -853,15 +856,15 @@ p {
     grid-row-gap: 14vh;
 }
 
-.movie-grid_item {
-}
 .movie-grid_item:hover .movie-grid_description {
     bottom: 0;
 }
+
 .movie-grid_inner1 {
     position: relative;
     overflow: hidden;
 }
+
 .movie-grid_description {
     position: absolute;
     left: 0;
@@ -875,6 +878,7 @@ p {
     flex-direction: column;
     transition: .2s;
 }
+
 .movie-grid_text1 {
     font-size: 1.75rem;
     font-weight: 900;
