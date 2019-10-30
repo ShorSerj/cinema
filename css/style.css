@@ -956,3 +956,31 @@ p {
 .relations footer {
     text-align: center;
 }
+
+#modalPresent {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 6rem;
+}
+
+#modalPresent .modal{
+    background-color: #ffffff; 
+    margin: 0 auto;
+    width: 20rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+#closeModalPresent {
+    position: absolute;
+    right: 1rem;
+    font-size: 30px;
+    top: 1rem;
+    cursor: pointer;
+}
