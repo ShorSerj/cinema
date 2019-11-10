@@ -489,7 +489,7 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    border-left: 98vw solid transparent;
+    border-left: 97vw solid transparent;
     border-bottom: 5.55rem solid #fff;
 }
 
@@ -891,15 +891,15 @@ p {
 }
 
 .movie-grid_text1 {
-    font-size: 1.75rem;
+    font-size: .75rem;
     font-weight: 900;
     color: #ffffff;
     margin: 0 0 .5rem;
 }
 
 .movie-grid_hr {
-    width: 4rem;
-    height: .4rem;
+    width: 6rem;
+    height: .1rem;
     border: 0;
     box-shadow: none;
     margin: 0 0 .7rem;

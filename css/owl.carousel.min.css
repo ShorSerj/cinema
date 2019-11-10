@@ -224,10 +224,10 @@
 
 .owl-prev {
     position: absolute;
-    left: -40px;
+    left: -10px;
 }
 
 .owl-next {
     position: absolute;
-    right: -40px;
+    right: -10px;
 }
