@@ -172,14 +172,16 @@ const film = {
 // C использованием innerHTML!
 
 let mosaicDOM = document.getElementById("grid"); 
+let fullHTML
 for (let i = 0; i < filmsNew.length; i++) {
     let currentFilm = filmsNew[i],
         filmBlockHTML = film.renderFilmBlock.bind(currentFilm)();
         let duble = fullHTML
-        var fullHTML = '<div class="movie-grid_item">'+filmBlockHTML+'</div>';
+        fullHTML = '<div class="movie-grid_item">'+filmBlockHTML+'</div>';
         fullHTML += duble
+        mosaicDOM.innerHTML = fullHTML;
     }
-mosaicDOM.innerHTML = fullHTML;
+
 
 
 
