@@ -1,37 +1,30 @@
-// // function str (){
-// //     let x = 'st' 
-// //     return function sx (){
-// //         console.log(x)
-// //     }
-    
-// // }
+const p = new Promise(function(resolve, reject){
+	setTimeout(()=>{
+		console.log('Preparing data...')
+		const backendData = {
+			server: 'aws',
+			port: 2000,
+			status: 'working'
+		}
+		resolve(backendData) // Эмитируем возникшую ошибку
 
-// // let a = str()
-// // console.log(typeof a);
-// // a();
+	}, 2000)
+}) 
 
-// function counter (){
-//     let count = 0;
-//     return function inc (){
-//         return count ++
-//     }
-// }
-//  let a = counter()
-//  let b = counter()
-//  console.log("cчетчик b " + b())
-//  console.log("cчетчик b " + b())
-//  console.log("cчетчик a " + a())
-//  console.log("cчетчик a " + a())
-//  console.log("cчетчик a " + a())
-
-//  function x (){
-    for(var i=0; i<10; i++){
-       setTimeout(
-           function(y){
-               return function(){
-                   console.log(y)
-                }
-            }(i), 1000)
-            
-    }
-// }
+p.then((data)=> {
+	return new Promise((resolve, reject)=> {
+		setTimeout(() => {
+			data.modified = true
+			resolve(data)
+		}, 2000)
+	})
+})
+	.then((clientData) => {
+	console.log('Data received', clientData)
+	clientData.fromPromise = true
+	return clientData
+}).then((data)=> {
+	console.log('Modified', data)
+}).catch((error)=> {
+		console.error('Error: ', error)
+	})

@@ -1,6 +1,3 @@
-// Тестовые данные (заглушка, моковые данные, стабы) - ответ от сервиса фильмов
-// films.ru/api/v1.0/films
-
 films = [
     film1 = {
         name: 'Человек паук',
@@ -33,6 +30,7 @@ films = [
         start: '19:00',
         ganar: [5, 3, 2],
         hire: true,
+        price: 400,
         new: false,
         description: 'Lorem ipsum dolor sit amet, consectetur adipis',
         fb: "https://fb.com",
@@ -58,6 +56,7 @@ films = [
         start: '15:00',
         ganar: [5, 3, 2],
         hire: true,
+        price: 320,
         new: false,
         description: 'Lorem ipsum dolor sit amet, consectetur adipis',
         fb: "https://fb.com",
@@ -70,6 +69,7 @@ films = [
         start: '19:00',
         ganar: [1, 2, 3],
         hire: true,
+        price: 360,
         new: false,
         description: 'Lorem ipsum dolor sit amet, consectetur adipis',
         fb: "https://fb.com",
@@ -89,7 +89,7 @@ const ganars = [
     'Мультфильм'
 ]
 
-console.log('ganars ', ganars)
+// console.log('ganars ', ganars)
 
 // Для секции Выберите фильм
 let filmsHire = []
@@ -124,6 +124,9 @@ const film = {
         let strGanars = arrGanars.join(', ')
         return strGanars
     },
+    getPrice: function () {
+        return this.price
+    },
     renderFilmBlock() {
         let filmName = this.name,
             filmImage = this.image,
@@ -152,6 +155,14 @@ const film = {
     }
 
 }
+
+let orderForm = document.getElementById('orderForm')
+let closeOrderForm = document.getElementById('closeOrderForm')
+
+closeOrderForm.onclick = function(){
+    orderForm.style.display = 'none' 
+}
+
 // C использованием appendChild!
 
 // let mosaicDOM = document.getElementById("grid"); // это flex контейнер, куда добавляются блоки
@@ -171,16 +182,18 @@ const film = {
 
 // C использованием innerHTML!
 
-let mosaicDOM = document.getElementById("grid"); 
-let fullHTML
-for (let i = 0; i < filmsNew.length; i++) {
-    let currentFilm = filmsNew[i],
-        filmBlockHTML = film.renderFilmBlock.bind(currentFilm)();
-        let duble = fullHTML
-        fullHTML = '<div class="movie-grid_item">'+filmBlockHTML+'</div>';
-        fullHTML += duble
-        mosaicDOM.innerHTML = fullHTML;
-    }
+// let mosaicDOM = document.getElementById("grid"); 
+// let fullHTML
+// for (let i = 0; i < filmsNew.length; i++) {
+//     let currentFilm = filmsNew[i],
+//         filmBlockHTML = film.renderFilmBlock.bind(currentFilm)();
+//         let duble = fullHTML
+//         fullHTML = '<div class="movie-grid_item">'+filmBlockHTML+'</div>';
+//         fullHTML += duble
+//         mosaicDOM.innerHTML = fullHTML;
+//         console.log(currentFilm)
+//     }
+    
 
 
 
@@ -189,9 +202,10 @@ for (let i = 0; i < filmsHire.length; i++) {
     const filmName = film.getName.bind(filmsHire[i])()
     const filmStart = film.getStart.bind(filmsHire[i])()
     const filmGnars = film.getGanar.bind(filmsHire[i])()
+    const filmPrice = film.getPrice.bind(filmsHire[i])()
     let filmsHireHTML = document.getElementById('filmsHire')
 
-    console.log('filmsHireHTML', filmsHireHTML)
+    // console.log('filmsHireHTML', filmsHireHTML)
 
     let filmHTML = `
             <td class="movie__table__tbody-time" id="start_film_$(1)">${filmStart}
@@ -199,6 +213,8 @@ for (let i = 0; i < filmsHire.length; i++) {
             <td class="movie__table__tbody-stuff" id="name_film_$(1)">${filmName}
             </td>
             <td class="movie__table__tbody-genre" id="ganar_film_$(1)">${filmGnars}
+            </td>
+            <td class="movie__table__tbody-genre" id="ganar_film_$(1)">${filmPrice}
             </td>
             <td class="movie__table__tbody-plus">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -208,9 +224,52 @@ for (let i = 0; i < filmsHire.length; i++) {
                 </svg>
             </td>
         `
-    let filmsCounter = '<tr>' + filmHTML + '</tr>'
-    filmsHireHTML.innerHTML += filmsCounter
-    // let tr = document.createElement("tr")
-    // tr.innerHTML = filmHTML
-    // filmsHireHTML.appendChild(tr)
+    // let filmsCounter = '<tr>' + filmHTML + '</tr>'
+    // filmsHireHTML.innerHTML += fil  
+    let tr = document.createElement("tr")
+    tr.className = 'strFilmHire'
+    tr.innerHTML = filmHTML
+    
+    tr.onclick = function () {
+        console.log(orderForm)
+        orderForm.style.display = 'block'
+
+        let orderFilmName = document.getElementById('orderFilmName')
+        let orderFilmStart = document.getElementById('orderFilmStart')
+        let orderFilmGanar = document.getElementById('orderFilmGanar')
+        let orderFilmPrice = document.getElementById('orderFilmPrice')
+
+        orderFilmName.innerHTML = filmName
+        orderFilmStart.innerHTML = filmStart
+        orderFilmGanar.innerHTML = filmGnars
+        orderFilmPrice.innerHTML = filmPrice
+    }
+    
+    filmsHireHTML.appendChild(tr)
+
 }
+
+let sendOrder = document.getElementById('sendOrder')
+sendOrder.onclick = function(){
+    let orderClientName = document.getElementById('orderClientName')
+ 
+    if (orderClientName.value) {
+        orderClientName.style.border = '1px sold #bebebe';
+    }
+    else{
+        orderClientName.style.border = '2px solid red'
+    }
+}
+
+let orderFilmPrice = document.getElementById('orderFilmPrice')
+let orderFilmCauntTicket = document.getElementById('orderFilmCauntTicket')
+let orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice')
+
+if(orderFilmPrice.value > 0) {
+    let TotalPrice = orderFilmPrice.value * orderFilmCauntTicket.value 
+}
+
+//const listFilm = document.querySelectorAll('.strFilmHire')
+//console.log('listFilm', listFilm)
+
+

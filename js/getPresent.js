@@ -2,6 +2,7 @@ let buttonShowModalPresent = document.getElementById('getPresentModal')
 let modalPresentWindow = document.getElementById('modalPresent')
 let closePresentWindow = document.getElementById('closeModalPresent')
 let sendPresentInfo = document.getElementById('sendPresentInfo')
+
 buttonShowModalPresent.onclick = function() {
     modalPresentWindow.style.display = 'block'
     console.log()

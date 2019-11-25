@@ -728,6 +728,10 @@ p {
     width: 6.8rem;
 }
 
+#filmsHire tr:hover td {
+    color: darksalmon;
+    cursor: pointer;
+}
 .movie__table__tbody-time{
     width: 11.25rem;
     word-wrap:break-word;
@@ -957,7 +961,8 @@ p {
     text-align: center;
 }
 
-#modalPresent {
+#modalPresent,
+#orderForm {
     display: none;
     position: fixed;
     width: 100%;
@@ -969,7 +974,9 @@ p {
     padding-top: 6rem;
 }
 
-#modalPresent .modal{
+#modalPresent .modal,
+#orderForm .modal
+{
     background-color: #ffffff; 
     margin: 0 auto;
     width: 20rem;
@@ -977,10 +984,17 @@ p {
     position: relative;
 }
 
-#closeModalPresent {
+#closeModalPresent,
+#closeOrderForm {
     position: absolute;
     right: 1rem;
     font-size: 30px;
     top: 1rem;
     cursor: pointer;
+}
+
+.button1 {
+    background-color: #90d23d;
+    border-radius: .3rem;
+    
 }
