@@ -27,10 +27,10 @@
                     <span></span>
                 </div>
                 <ul class="main__menu-list">
-                    <li><a href="#ЗАКАЗАТЬ БИЛЕТ">ЗАКАЗАТЬ БИЛЕТ</a></li>
-                    <li><a href="#ПРЕИМУЩЕСТВА">ПРЕИМУЩЕСТВА</a></li>
-                    <li><a href="#ФИЛЬМЫ">ФИЛЬМЫ </a></li>
-                    <li><a href="#КОНТАКТЫ">КОНТАКТЫ</a></li>
+                    <li><a class="link-menu" href="#buyTicket">ЗАКАЗАТЬ БИЛЕТ</a></li>
+                    <li><a class="link-menu"href="#advatages">ПРЕИМУЩЕСТВА</a></li>
+                    <li><a class="link-menu"href="#films">ФИЛЬМЫ </a></li>
+                    <li><a class="link-menu"href="#contacts">КОНТАКТЫ</a></li>
                 </ul>
             </div>
             <div class="main__head">
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div id="advatages" class="container">
         <div class="main__welcome">
             <h2>
                 Добро пожаловать!
@@ -115,7 +115,7 @@
     </div>
     </div>
     </section>
-    <section>
+    <section id="buyTicket">
         <div class="movie">
             <h2 class="movie__header"><a name="ФИЛЬМЫ"></a>
                 Выберите фильм
@@ -188,7 +188,7 @@
             </div>
         </div>
     </section>
-    <div class="film">
+    <div id="films" class="film">
         <section class="films">
             <h2>
                 Фильмы
@@ -200,7 +200,7 @@
             </p>
         </section>
         <section>
-            <div id="filmsNew" class="movie-grid ">
+            <div id="filmsNew" class="movie-grid">
                 <div id="grid" class="movie-grid_flex owl-carousel">
 
                 </div>
@@ -208,7 +208,7 @@
         </section>
     </div>
     <section>
-        <div class="relations">
+        <div id="contacts" class="relations">
             <div class="relations_icons">
                 <a href="#" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -443,7 +443,7 @@
                     <input type="number" value="1" id="orderFilmCauntTicket" />
                 </div>
                 <div>
-                    <span>Общая стоимость билетов</span>
+                    <span>Общая стоимость билетов:</span>
                     <span id="orderFilmTotalPrice"></span>
 
                 </div>
@@ -458,20 +458,25 @@
                 <div class="input-wrap">
                     <button id="sendOrder" class="button1">Забранировать</button>
                 </div>
+                <div id="mistake"></div>
+            </div>
+            <div id="places">
+                
             </div>
         </div>
     </div>
 
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/film.js"></script>
     <script src="js/getPresent.js"></script>
     <script src="js/slider.js"></script>
-    
-    <!-- <script src="js/home_work_4.5.js"></script> -->
-
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script>
+        <script>
+        $(document).ready(function(){
+            
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
@@ -488,8 +493,8 @@
                 }
             }
         })
+    });
     </script>
-
 
 </body>
 

@@ -47,15 +47,14 @@ p.then((data) => {
     })
 
     let mosaicDOM = document.getElementById("grid"); 
-    let fullHTML
+    let fullHTML = "";
     for (let i = 0; i < filmsForSlider.length; i++) {
-        let currentFilm = filmsForSlider[i],
+        let currentFilm = filmsForSlider[i]
             filmBlockHTML = film.renderFilmBlock.bind(currentFilm)();
             let duble = fullHTML
-            fullHTML = '<div class="movie-grid_item">'+filmBlockHTML+'</div>';
+            fullHTML = '<div class="movie-grid_item">' + filmBlockHTML + '</div>';
             fullHTML += duble
             mosaicDOM.innerHTML = fullHTML;
-            console.log(currentFilm)
         }
 
     

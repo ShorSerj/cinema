@@ -89,7 +89,73 @@ const ganars = [
     'Мультфильм'
 ]
 
-// console.log('ganars ', ganars)
+//База для бронипрования мест
+allplace = 10;
+let placebaz = [];
+
+for (let i = 1; i <= allplace; i++) {
+    function check(){
+        let rightBetterPlace = allplace-(allplace / 3)
+        let leftBetterPlace = allplace - 2 * (allplace / 3)
+        if (i > rightBetterPlace || i < leftBetterPlace) {
+            price = 200
+            return price
+        }else{
+            price = 350
+            return price  
+        }
+    }
+    function bronePlace(){
+        let chans = Math.ceil(Math.random() * 100)
+        if (chans > 50) {
+            chans = true
+            return chans
+        }else { 
+            chans = false
+            return chans
+        }        
+    }
+    let place = {
+        number: i,
+        price: check(),
+        brone: bronePlace(),
+    }
+    
+    placebaz.push(place)
+}
+//
+
+//Распределяет свободные и забронированные места в зале
+let placesHTML = document.getElementById('places')
+let zall = document.createElement('div')
+zall.className = 'places'
+for (place of placebaz) {
+    let placeDiv = document.createElement('div')
+    placeDiv.className = 'place'
+    placeDiv.innerHTML = place.number
+    
+
+    if(place.brone) {
+        placeDiv.className = 'place placeBrone'
+    }else{
+        placeDiv.className = 'place placeFree'
+    }
+    zall.append(placeDiv)
+}
+placesHTML.append(zall) 
+let choose = document.getElementsByClassName('placeFree')
+let allzal = document.getElementsByClassName('place')
+console.log(choose.length)
+console.log(allzal.length)
+//
+
+// order()
+// placeToggle()
+// placeContext() 
+// placeHover() 
+// placeHoverOut() 
+
+
 
 // Для секции Выберите фильм
 let filmsHire = []
@@ -106,7 +172,6 @@ for (let i = 0; i < films.length; i++) {
         filmsNew.push(films[i])
     }
 }
-// console.log(filmsNew)
 
 const film = {
     getName: function () {
@@ -135,22 +200,24 @@ const film = {
             filmTw = this.twitter,
             filmBh = this.behance,
             filmHTML = `
-                    <div class="movie-grid_inner1"></div>
-                        <div class="movie-grid_poster">
-                            <img src="${filmImage}" alt="">
-                        </div>
-                        <div class="movie-grid_description">
-                            <p class="movie-grid_text1">${filmName}</p>
-                            <hr class="movie-grid_hr" />
-                            <p class="movie-grid_text2">${filmDescription}</p>
-                            <div class="block05__linls">
-                                <a href="${filmTw}" target="_blank"><i class="icon icon-twitter" title="twitter"></i></a>
-                                <a href="${filmFb}" target="_blank"><i class="icon icon-facebook" title="facebook"></i></a>
-                                <a href="${filmBh}"><i class="icon icon-camera" title="camera"></i></a>
-                            </div>
+                 <div class="owl-stage>
+                    <div class="movie-grid_inner1">
+                    </div>
+                    <div class="movie-grid_poster">
+                        <img src="${filmImage}" alt="">
+                    </div>
+                    <div class="movie-grid_description">
+                        <p class="movie-grid_text1">${filmName}</p>
+                        <hr class="movie-grid_hr" />
+                        <p class="movie-grid_text2">${filmDescription}</p>
+                        <div class="block05__linls">
+                            <a href="${filmTw}" target="_blank"><i class="icon icon-twitter" title="twitter"></i></a>
+                            <a href="${filmFb}" target="_blank"><i class="icon icon-facebook" title="facebook"></i></a>
+                            <a href="${filmBh}"><i class="icon icon-camera" title="camera"></i></a>
                         </div>
                     </div>
-                `;
+                </div>
+                `
         return filmHTML;
     }
 
@@ -163,49 +230,12 @@ closeOrderForm.onclick = function(){
     orderForm.style.display = 'none' 
 }
 
-// C использованием appendChild!
-
-// let mosaicDOM = document.getElementById("grid"); // это flex контейнер, куда добавляются блоки
-// for (let i = 0; i < filmsNew.length; i++) {
-//     let currentFilm = filmsNew[i],
-//         filmBlockHTML = film.renderFilmBlock.bind(currentFilm)(),
-//         div = document.createElement("div"); //содаем DOM элемент DIV - контейнер одного фильма в мозайке
-
-//     // у вашего контейнера DIV, который держит один блок с фильмом есть какой то свой класс
-//     // поскольку этот контейнер мы создаем программно. То этот класс нужно будет так же
-//     //добавить программно
-//     div.classList.add("movie-grid_item");
-//     div.innerHTML = filmBlockHTML; //записываем в DOM элемент HTML разметку
-//     mosaicDOM.appendChild(div); //добавляем в DOM элемент таблицы DOM элемент строки с фильмом
-// }
-
-
-// C использованием innerHTML!
-
-// let mosaicDOM = document.getElementById("grid"); 
-// let fullHTML
-// for (let i = 0; i < filmsNew.length; i++) {
-//     let currentFilm = filmsNew[i],
-//         filmBlockHTML = film.renderFilmBlock.bind(currentFilm)();
-//         let duble = fullHTML
-//         fullHTML = '<div class="movie-grid_item">'+filmBlockHTML+'</div>';
-//         fullHTML += duble
-//         mosaicDOM.innerHTML = fullHTML;
-//         console.log(currentFilm)
-//     }
-    
-
-
-
-
 for (let i = 0; i < filmsHire.length; i++) {
     const filmName = film.getName.bind(filmsHire[i])()
     const filmStart = film.getStart.bind(filmsHire[i])()
     const filmGnars = film.getGanar.bind(filmsHire[i])()
     const filmPrice = film.getPrice.bind(filmsHire[i])()
     let filmsHireHTML = document.getElementById('filmsHire')
-
-    // console.log('filmsHireHTML', filmsHireHTML)
 
     let filmHTML = `
             <td class="movie__table__tbody-time" id="start_film_$(1)">${filmStart}
@@ -224,14 +254,12 @@ for (let i = 0; i < filmsHire.length; i++) {
                 </svg>
             </td>
         `
-    // let filmsCounter = '<tr>' + filmHTML + '</tr>'
-    // filmsHireHTML.innerHTML += fil  
+
     let tr = document.createElement("tr")
     tr.className = 'strFilmHire'
     tr.innerHTML = filmHTML
     
     tr.onclick = function () {
-        console.log(orderForm)
         orderForm.style.display = 'block'
 
         let orderFilmName = document.getElementById('orderFilmName')
@@ -265,11 +293,71 @@ let orderFilmPrice = document.getElementById('orderFilmPrice')
 let orderFilmCauntTicket = document.getElementById('orderFilmCauntTicket')
 let orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice')
 
-if(orderFilmPrice.value > 0) {
-    let TotalPrice = orderFilmPrice.value * orderFilmCauntTicket.value 
+//общая цена за билеты
+orderFilmCauntTicket.onclick = function() {
+    if(orderFilmPrice.innerText > 0 && orderFilmCauntTicket.value <= choose.length) {
+    let TotalPrice = orderFilmPrice.innerText * orderFilmCauntTicket.value ;
+    orderFilmTotalPrice.innerHTML = TotalPrice;
+    }else {
+        orderFilmCauntTicket.value = choose.length
+        console.log('Больше нет свободных мест')
+    }
 }
+//
 
-//const listFilm = document.querySelectorAll('.strFilmHire')
-//console.log('listFilm', listFilm)
+//Не дает вводить буквы в номер телефона
+document.getElementById('orderFilmPhone').onkeydown = function(e){
+    return !(/^[А-Яа-яA-Za-z ]$/.test(e.key));
+}
+//
+
+//Быстрый доступ к меню ввиде шторки при скроле
+$('.link-menu').on('click', function (event) {
+    let elementClick = $(this).attr("href")
+    let destination = $(elementClick).offset().top
+    if (false) {
+        $('body').animate({ scrollTop: destination}, 5600)
+    }else {
+        $('html').animate({ scrollTop: destination}, 1500)
+    }
+    
+    return false
+})
+
+let header = $('.main__menu')
+let scrollPrev = 0
+
+$(window).scroll(function () {
+    let scrolled = $(window).scrollTop()
+    
+    if (scrolled > 100 && scrolled > scrollPrev) {
+        header.addClass('out')
+    } else {
+        header.removeClass('out')
+    }
+    scrollPrev = scrolled
+})
+//
+
+
+//По клику бронирует/снимает бронь места
+for(let i = 0; i < allzal.length; i++){ 
+    allzal[i].addEventListener("click", function() {
+        let orderBubble = allzal[i].classList.value
+        if(orderBubble !== 'place placeBrone'){
+            let placeFre = allzal[i]
+            let myBrone = document.getElementsByClassName('placeClick')
+            placeFre.classList.toggle("placeClick");
+            if(orderFilmCauntTicket.value < myBrone.length){
+                mistake.innerText = "Выделенных мест больше чем заявлено"
+            }else {
+                mistake.innerText =""
+            }
+        }else{
+            mistake.innerText = "Место занято"
+        }
+    })
+       
+}
 
 

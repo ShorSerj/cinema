@@ -483,6 +483,20 @@ p {
     margin: 0 auto;
 }
 
+.main__menu {
+    padding: 0rem 0rem 0 6rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    transition: all .3s ease;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.main__menu.out {
+    transform: translateY(-100%);
+}
+
 .main:after {
     content: "";
     position: absolute;
@@ -833,8 +847,6 @@ p {
 }
 
 .present__button {
-    width: 10.75rem;
-    background: url(../images/button.png)no-repeat top center /cover;
     margin: 0.9rem 0 0 0;
     height: auto;
     display: inline-block;
@@ -979,22 +991,116 @@ p {
 {
     background-color: #ffffff; 
     margin: 0 auto;
-    width: 20rem;
+    width: 24rem;
     border-radius: 1rem;
     position: relative;
+    padding: 1rem;
+    flex: auto;
+}
+#orderFilmPrice {
+    margin-right: 7rem;
+}
+#orderFilmPhone{
+    width: 7rem;
+}
+#orderFilmCauntTicket{
+    width: 5.4rem;
 }
 
+#orderClientFilm{
+    width: 12.3rem;
+}
 #closeModalPresent,
 #closeOrderForm {
     position: absolute;
     right: 1rem;
-    font-size: 30px;
+    font-size: 0.8rem;
     top: 1rem;
     cursor: pointer;
+    background-color: white;
+    border-color: white;
+}
+
+.modal_form {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .button1 {
     background-color: #90d23d;
-    border-radius: .3rem;
+    border-radius: 0.6rem;
+    padding: 0.7rem;
+    color: white;
+    margin-top: 1rem;
     
+}
+
+.button1:active {
+    background-color: white;
+    color: #90d23d;
+}
+
+.places {
+    display: flex;
+    margin: 30px;
+}
+
+/* .placeDiv {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #000;
+    font-size: 23px;
+    font-weight: bold;
+    margin-right: 5px;
+    text-align: center;
+} */
+
+.placeBrone {
+    background-color: orange;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #000;
+    font-size: 23px;
+    font-weight: bold;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.placeFree {
+    background-color: greenyellow;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #000;
+    font-size: 23px;
+    font-weight: bold;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.choosePlace{
+    background-color: red;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #000;
+    font-size: 23px;
+    font-weight: bold;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.placeClick {
+    background-color: red;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #000;
+    font-size: 23px;
+    font-weight: bold;
+    margin-right: 5px;
+    text-align: center;
+}
+
+#mistake {
+    color: red;
 }
