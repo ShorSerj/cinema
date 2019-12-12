@@ -10,7 +10,6 @@
     <title>Webpack Boilerplate</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/media.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
@@ -20,18 +19,23 @@
 <body>
     <div class="main">
         <div class="block">
-            <div class="main__logo">
-            </div>
             <div class="main__menu">
+                <div class="main__logo">
+                </div>
                 <div class="menu-burger">
                     <span></span>
                 </div>
                 <ul class="main__menu-list">
-                    <li><a class="link-menu" href="#buyTicket">ЗАКАЗАТЬ БИЛЕТ</a></li>
-                    <li><a class="link-menu"href="#advatages">ПРЕИМУЩЕСТВА</a></li>
-                    <li><a class="link-menu"href="#films">ФИЛЬМЫ </a></li>
-                    <li><a class="link-menu"href="#contacts">КОНТАКТЫ</a></li>
+                    <li><a href="#buyTicket">ЗАКАЗАТЬ БИЛЕТ</a></li>
+                    <li><a href="#advatages">ПРЕИМУЩЕСТВА</a></li>
+                    <li><a href="#films">ФИЛЬМЫ </a></li>
+                    <li><a href="#contacts">КОНТАКТЫ</a></li>
+                    <li>
+                        <span class="link-menu">Ваш город: </span>
+                        <a href="#" id="city_name" data-modal="#choose_city"></a> 
+                    </li>
                 </ul>
+                
             </div>
             <div class="main__head">
                 <h1><a name="ЗАКАЗАТЬ БИЛЕТ"></a>
@@ -473,28 +477,28 @@
     <script src="js/getPresent.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/ajax.js"></script>
         <script>
-        $(document).ready(function(){
-            
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
-                }
-            }
-        })
-    });
-    </script>
+            $(document).ready(function(){
+                $('.owl-carousel').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 3
+                        },
+                        1000: {
+                            items: 5
+                        }
+                    }
+                })
+            });
+        </script>
 
 </body>
 

@@ -540,6 +540,10 @@ p {
     
 }
 
+.link-menu {
+    color: white;
+}
+
 .main__menu-list li a:hover {
     border-bottom: solid 1px #90d23d;
   }
@@ -956,9 +960,7 @@ p {
     height: 2.35rem;
 }
 
-.relations__text {
 
-}
 .relations__text p {
     padding-top: 1.3rem;
     text-align: center;

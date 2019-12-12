@@ -145,8 +145,8 @@ for (place of placebaz) {
 placesHTML.append(zall) 
 let choose = document.getElementsByClassName('placeFree')
 let allzal = document.getElementsByClassName('place')
-console.log(choose.length)
-console.log(allzal.length)
+// console.log(choose.length)
+// console.log(allzal.length)
 //
 
 // order()
